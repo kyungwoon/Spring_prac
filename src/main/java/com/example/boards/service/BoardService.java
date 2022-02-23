@@ -1,8 +1,8 @@
 package com.example.boards.service;
 
 import com.example.boards.domain.Board;
-import com.example.boards.domain.BoardRepository;
-import com.example.boards.domain.BoardRequestDto;
+import com.example.boards.repository.BoardRepository;
+import com.example.boards.dto.BoardRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

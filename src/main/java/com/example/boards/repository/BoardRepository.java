@@ -1,4 +1,4 @@
-package com.example.boards.domain;
+package com.example.boards.repository;
 
 import com.example.boards.domain.Board;
 import org.springframework.data.domain.Page;
