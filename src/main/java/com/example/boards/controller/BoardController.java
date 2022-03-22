@@ -5,10 +5,12 @@ import com.example.boards.repository.BoardRepository;
 import com.example.boards.dto.BoardRequestDto;
 import com.example.boards.service.BoardService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RequiredArgsConstructor
 @RestController
 public class BoardController {
@@ -18,6 +20,7 @@ public class BoardController {
 
     @PostMapping("/api/boards") // 생성
     public Board createBoard(@RequestBody BoardRequestDto requestDto) {
+        log.info("생성");
         Board board = new Board(requestDto);
         return boardRepository.save(board);
 
@@ -57,6 +60,4 @@ public class BoardController {
         boardRepository.deleteById(id);
         return id;
     }
-
-
 }
